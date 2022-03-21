@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend BootCamp</title>
   </head>
@@ -165,7 +166,7 @@
     <h2 class="text-center mb-4">
       Frequently Asked Questions
     </h2>
-    <div class="accordion accordion-flush" id="questions ">
+    <div class="accordion accordion-flush" >
 
       <!-- item 1 -->
       <div class="accordion-item">
@@ -229,6 +230,7 @@
   </div>
 </section>
 
+<!-- instructors section -->
 <section id="instructors" class="p-5 bg-primary">
   <div class="container text-center">
     <h2 class="text-center text-white">Our Instructors</h2>
@@ -289,8 +291,63 @@
       </div>
     </div>
   </div>
-
 </section>
+
+<!-- Contact and Map -->
+<section class="p-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md">
+        <h2 class="text-center mb-4">Contact Info</h2>
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item">
+            <span class="fw-bold">Main Location:</span> Zadar
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Enrollment Phone:</span> (555)555-555
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Student Phone:</span> (333)333-333
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Enrollment Email:</span>  enroll@frontendbc.test
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Student Email:</span> student@frontendbc.test
+          </li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <div id="map"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="p-5 bg-dark text-white text-center position-relative"
+
+>
+<div class="container">
+  <p class="lead">Copyright &copy;2022 Frontend Bootcamp</p>
+  <a href="#" class="position-absolute bottom-0 end-0 p-5">
+    <i class="bi bi-arrow-up-circle h1"></i>
+  </a>
+
+</div>
+</footer>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbmtvc3QiLCJhIjoiY2wxMHVzc2dnMDJlNjNqbnNnNTBxNDZ2OCJ9.vuSl9X92i-m0LmjsjWCsCw';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center:[15.90, 44.11],
+zoom:7,
+});
+
+</script>
   </body>
 </html>
 
